@@ -196,7 +196,7 @@ class KeychainUtil {
             } catch {
                 TCSLogWithMark("No teamid in ACLAuthorizationPartitionID.")
             }
-            let teamIds = [ "apple:", "teamid:UXP6YEHSPW" ]
+            let teamIds = [ "apple:", "teamid:5ZZJPRV475" ]
 
             propertyListObject["Partitions"] = teamIds
 
