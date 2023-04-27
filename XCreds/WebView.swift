@@ -25,7 +25,7 @@ class WebViewController: NSWindowController {
     func loadPage() {
 
 
-        let licenseState = LicenseChecker().currentLicenseState()
+        //let licenseState = LicenseChecker().currentLicenseState()
         if let refreshTitleTextField = refreshTitleTextField {
             refreshTitleTextField.isHidden = !UserDefaults.standard.bool(forKey: PrefKeys.shouldShowRefreshBanner.rawValue)
         }
@@ -33,7 +33,7 @@ class WebViewController: NSWindowController {
         webView.navigationDelegate = self
         TokenManager.shared.oidc().delegate = self
         clearCookies()
-
+        /*
         switch licenseState {
 
         case .valid, .trial(_):
@@ -54,7 +54,7 @@ class WebViewController: NSWindowController {
             }
             return
 
-        }
+        } */
          if let url = TokenManager.shared.oidc().createLoginURL() {
             TCSLogWithMark()
             self.webView.load(URLRequest(url: url))

@@ -27,6 +27,7 @@ class LoginWindowControlsWindowController: NSWindowController {
     }
     override func windowDidLoad() {
         super.windowDidLoad()
+        /*
         let licenseState = LicenseChecker().currentLicenseState()
 
 
@@ -64,6 +65,8 @@ class LoginWindowControlsWindowController: NSWindowController {
             self.trialVersionStatusTextField.stringValue = "Invalid License. Please visit twocanoes.com for more information."
 
         }
+        */
+        self.trialVersionStatusTextField?.isHidden = true
         setupLoginWindowControlsAppearance()
         let allBundles = Bundle.allBundles
         versionTextField?.stringValue = ""
